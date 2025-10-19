@@ -1,0 +1,137 @@
+﻿CREATE DATABASE FurnitureStore;
+GO
+
+USE FurnitureStore;
+GO
+
+-- Bảng Users
+CREATE TABLE Users (
+    Id INT IDENTITY PRIMARY KEY,
+    Username NVARCHAR(100) UNIQUE NOT NULL,
+    Password NVARCHAR(255) NOT NULL,
+    Email NVARCHAR(150) UNIQUE NOT NULL,
+    Fullname NVARCHAR(150),
+	Phone NVARCHAR(20),
+	Address NVARCHAR(250),
+	Avatar NVARCHAR(250),
+    Role NVARCHAR(20) DEFAULT 'Customer',
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Bảng Categories
+CREATE TABLE Categories (
+    Id INT IDENTITY PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Description NVARCHAR(255),
+    CreatedAt DATETIME DEFAULT GETDATE(),
+	UpdateAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Bảng Products
+CREATE TABLE Products (
+    Id INT IDENTITY PRIMARY KEY,
+    CategoryId INT FOREIGN KEY REFERENCES Categories(Id),
+    Name NVARCHAR(150) NOT NULL,
+	Quantity INT NOT NULL,
+	Price DECIMAL(18,2) NOT NULL,
+    Description NVARCHAR(MAX),
+    CreatedAt DATETIME DEFAULT GETDATE(),
+	UpdateAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Bảng ProductImages
+CREATE TABLE ProductImages (
+    Id INT IDENTITY PRIMARY KEY,
+    ProductId INT FOREIGN KEY REFERENCES Products(Id),
+	Ordinal INT,
+    ImageUrl NVARCHAR(255) NOT NULL,
+	CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Bảng Carts
+CREATE TABLE Carts (
+    Id INT IDENTITY PRIMARY KEY,
+    UserId INT FOREIGN KEY REFERENCES Users(Id),
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Bảng CartDetails
+CREATE TABLE CartItems (
+    Id INT IDENTITY PRIMARY KEY,
+    CartId INT FOREIGN KEY REFERENCES Carts(Id),
+    ProductId INT FOREIGN KEY REFERENCES Products(Id),
+    Quantity INT DEFAULT 1 CHECK (Quantity > 0),
+	CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Bảng Orders
+CREATE TABLE Orders (
+    Id INT IDENTITY PRIMARY KEY,
+    UserId INT FOREIGN KEY REFERENCES Users(Id),
+	Fullname NVARCHAR(150),
+	Email NVARCHAR(150),
+	Phone NVARCHAR(20),
+	Address NVARCHAR(250),
+	Note NVARCHAR(MAX),
+    TotalAmount DECIMAL(18,2),
+    Status NVARCHAR(50) DEFAULT 'Pending',
+	OrderDate DATETIME DEFAULT GETDATE(),
+	CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Bảng OrderDetails
+CREATE TABLE OrderDetails (
+    Id INT IDENTITY PRIMARY KEY,
+    OrderId INT FOREIGN KEY REFERENCES Orders(Id),
+    ProductId INT FOREIGN KEY REFERENCES Products(Id),
+    Quantity INT CHECK (Quantity > 0),
+    Price DECIMAL(18,2),
+	CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+CREATE TABLE Payments (
+    Id INT IDENTITY PRIMARY KEY,
+    OrderId INT FOREIGN KEY REFERENCES Orders(Id),
+    PaymentMethod NVARCHAR(50),
+	PaymentStatus NVARCHAR(50) DEFAULT 'Pending', 
+    PaymentDate DATETIME DEFAULT GETDATE(),
+	CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Bảng Blogs
+CREATE TABLE Blogs (
+	Id INT IDENTITY(1,1) PRIMARY KEY,
+	Title NVARCHAR(255) NOT NULL,
+	Content NVARCHAR(MAX) NOT NULL,
+	Author NVARCHAR(100) NOT NULL,
+	CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- Bảng Reviews
+CREATE TABLE Reviews (
+    Id INT IDENTITY PRIMARY KEY,
+    ProductId INT FOREIGN KEY REFERENCES Products(Id),
+    UserId INT FOREIGN KEY REFERENCES Users(Id),
+    Comment NVARCHAR(500),
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    UpdatedAt DATETIME DEFAULT GETDATE()
+);
+GO
