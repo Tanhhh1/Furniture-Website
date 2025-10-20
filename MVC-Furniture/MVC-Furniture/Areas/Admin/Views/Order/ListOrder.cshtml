@@ -1,0 +1,102 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/list.css" />
+}
+
+<div class="list_container">
+    <div class="list_header">
+        <div>
+            <h2>Quản Lý Đơn Hàng</h2>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+
+    <div class="list_content">
+        <div class="table_actions">
+            <div class="search_box">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Tìm kiếm đơn hàng...">
+            </div>
+
+            <div class="filter_box">
+                <select>
+                    <option value="">Tất cả trạng thái</option>
+                    <option value="pending">Chờ xử lý</option>
+                    <option value="completed">Hoàn tất</option>
+                    <option value="cancelled">Đã hủy</option>
+                </select>
+                <select>
+                    <option value="">Tất cả thanh toán</option>
+                    <option value="paid">Đã thanh toán</option>
+                    <option value="unpaid">Chưa thanh toán</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="table_wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã đơn</th>
+                        <th>Khách hàng</th>
+                        <th>Email</th>
+                        <th>Ngày đặt</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                        <th>Thanh toán</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#ORD001</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>vana@example.com</td>
+                        <td>12-10-2025</td>
+                        <td>2.450.000₫</td>
+                        <td><span class="status pending">Chờ xử lý</span></td>
+                        <td><span class="payment unpaid">Chưa Thanh Toán</span></td>
+                        <td class="action_icons">
+                            <a href=""><i class='bx bx-show'></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#ORD002</td>
+                        <td>Trần Thị B</td>
+                        <td>tranb@example.com</td>
+                        <td>11-10-2025</td>
+                        <td>1.780.000₫</td>
+                        <td><span class="status pending">Chờ xử lý</span></td>
+                        <td><span class="payment paid">Đã Thanh Toán</span></td>
+                        <td class="action_icons">
+                            <a href=""><i class='bx bx-show'></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#ORD003</td>
+                        <td>Phạm Cường</td>
+                        <td>cuongp@example.com</td>
+                        <td>09-10-2025</td>
+                        <td>3.250.000₫</td>
+                        <td><span class="status completed">Hoàn tất</span></td>
+                        <td><span class="payment paid">Đã Thanh Toán</span></td>
+                        <td class="action_icons">
+                            <a href=""><i class='bx bx-show'></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#ORD004</td>
+                        <td>Hoàng Lan</td>
+                        <td>lanh@example.com</td>
+                        <td>08-10-2025</td>
+                        <td>990.000₫</td>
+                        <td><span class="status cancelled">Đã hủy</span></td>
+                        <td><span class="payment unpaid">Chưa Thanh Toán</span></td>
+                        <td class="action_icons">
+                            <a href=""><i class='bx bx-show'></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

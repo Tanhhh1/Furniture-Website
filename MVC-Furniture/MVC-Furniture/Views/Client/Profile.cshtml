@@ -1,0 +1,79 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/client/profile.css" />
+}
+
+<section class="profile_container">
+    <div class="sidebar">
+        <h2>Tài khoản</h2>
+        <ul>
+            <li class="tab active" data-tab="info"><i class='bx bx-user'></i> Thông tin cá nhân</li>
+            <li class="tab" data-tab="orders"><i class='bx bx-history'></i> Lịch sử đơn hàng</li>
+            <li><i class='bx bx-log-out'></i> Đăng xuất</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="tab_content active" id="info">
+            <h2>Thông tin cá nhân</h2>
+            <form class="info_form">
+                <div class="form_group">
+                    <label>Họ và tên</label>
+                    <input type="text" placeholder="Nhập họ và tên của bạn" value="Nguyễn Văn A">
+                </div>
+                <div class="form_group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Nhập email" value="nguyenvana@example.com">
+                </div>
+                <div class="form_group">
+                    <label>Số điện thoại</label>
+                    <input type="text" placeholder="Nhập số điện thoại" value="0901234567">
+                </div>
+                <div class="form_group">
+                    <label>Địa chỉ</label>
+                    <input type="text" placeholder="Nhập địa chỉ nhận hàng"
+                           value="123 Đường Hoa Cúc, Quận 9, TP.HCM">
+                </div>
+                <button type="submit" class="save_btn">Lưu thay đổi</button>
+            </form>
+        </div>
+
+        <div class="tab_content" id="orders">
+            <h2>Lịch sử đơn hàng</h2>
+            <div class="order_table_wrapper">
+                <table class="order_table">
+                    <thead>
+                        <tr>
+                            <th>Mã đơn hàng</th>
+                            <th>Ngày đặt</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#DH-001</td>
+                            <td>10/10/2025</td>
+                            <td>2.850.000₫</td>
+                            <td><span class="status completed">Đã hoàn thành</span></td>
+                        </tr>
+                        <tr>
+                            <td>#DH-002</td>
+                            <td>22/09/2025</td>
+                            <td>1.250.000₫</td>
+                            <td><span class="status pending">Đang xử lý</span></td>
+                        </tr>
+                        <tr>
+                            <td>#DH-003</td>
+                            <td>30/08/2025</td>
+                            <td>680.000₫</td>
+                            <td><span class="status cancelled">Đã hủy</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    <script src="~/js/profile.js"></script>
+}

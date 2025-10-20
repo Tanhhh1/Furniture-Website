@@ -1,0 +1,66 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/product.css" />
+}
+
+<div class="prod_container">
+    <div class="prod_header">
+        <div>
+            <h2>Sửa Thông Tin Sản Phẩm #112</h2>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+    <div class="prod_content">
+        <form class="prod_form" action="">
+            <div class="form_content">
+                <div class="form_left">
+                    <div>
+                        <label>Tên sản phẩm</label>
+                        <input type="text" placeholder="Nhập tên sản phẩm">
+                    </div>
+
+                    <div>
+                        <label>Loại sản phẩm</label>
+                        <select>
+                            <option>Chọn loại sản phẩm</option>
+                        </select>
+                    </div>
+
+                    <div class="input_group">
+                        <div>
+                            <label>Số lượng</label>
+                            <input type="number" placeholder="Nhập số lượng">
+                        </div>
+                        <div>
+                            <label>Giá tiền</label>
+                            <input type="text" placeholder="Nhập giá tiền">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>Mô tả</label>
+                        <textarea placeholder="Nhập mô tả"></textarea>
+                    </div>
+                </div>
+
+                <div class="form_right">
+                    <label>Ảnh mô tả</label>
+                    <div class="upload_box">
+                        <i class="fa-regular fa-image fa-2x"></i>
+                        <p>Click để chọn ảnh</p>
+                    </div>
+                    <input type="file" id="image_upload" accept="image/*" multiple style="display: none;">
+                    <div class="image_preview">
+                    </div>
+                </div>
+            </div>
+            <div class="form_actions">
+                <button class="save_btn">Lưu</button>
+                <a href="" class="cancel">Hủy</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/upload.js"></script>
+}

@@ -1,0 +1,39 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/form.css" />
+}
+
+<div class="form_container">
+    <div class="form_header">
+        <h2>Sửa Thông Tin Bài Viết #112</h2>
+        <span id="currentDate"></span>
+    </div>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="form_group">
+            <label for="title">Tiêu đề bài viết</label>
+            <input type="text" id="title" name="title" placeholder="Nhập tiêu đề bài viết..." required>
+        </div>
+
+        <div class="form_group">
+            <label>Ảnh Banner</label>
+            <div class="image_preview" id="imagePreview">
+                <span style="display: none;">Click để chọn ảnh</span>
+                <img id="previewImg" src="/images/banner.jpg" alt="">
+            </div>
+            <input type="file" id="bannerInput" name="banner" accept="image/*">
+        </div>
+
+        <div class="form_group">
+            <label for="content">Nội dung bài viết</label>
+            <textarea id="content" name="content" placeholder="Nhập nội dung bài viết..." required></textarea>
+        </div>
+
+        <div class="form_actions">
+            <button type="submit" class="save_btn">Lưu bài viết</button>
+            <a href="" class="cancel">Hủy</a>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    <script src="~/js/form.js"></script>
+}

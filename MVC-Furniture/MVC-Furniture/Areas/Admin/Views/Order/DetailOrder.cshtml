@@ -1,0 +1,93 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/order.css" />
+}
+
+<div class="order_detail_container">
+    <div class="order_header">
+        <div>
+            <h2>Chi Tiết Đơn Hàng #1254</h2>
+            <span>Thứ Năm, 16 tháng 10, 2025</span>
+        </div>
+    </div>
+
+    <div class="customer_info">
+        <div class="customer_header">
+            <h3>Thông Tin Khách Hàng</h3>
+            <button class="approve_btn">
+                <i class='bx bx-check-circle'></i> Duyệt Đơn
+            </button>
+        </div>
+        <div class="info_grid">
+            <div class="info_item">
+                <label>Họ và Tên:</label>
+                <p>Nguyễn Văn A</p>
+            </div>
+            <div class="info_item">
+                <label>Email:</label>
+                <p>nguyenvana@gmail.com</p>
+            </div>
+            <div class="info_item">
+                <label>Số điện thoại:</label>
+                <p>0909123456</p>
+            </div>
+            <div class="info_item">
+                <label>Địa chỉ:</label>
+                <p>123 Đường ABC, Quận 1, TP. Hồ Chí Minh</p>
+            </div>
+            <div class="info_item">
+                <label>Thanh toán:</label>
+                <span class="payment unpaid">Chưa Thanh Toán</span>
+            </div>
+            <div class="info_item">
+                <label>Trạng thái:</label>
+                <span class="status pending">Chờ xử lý</span></td>
+            </div>
+        </div>
+        <div class="note">
+            <div class="info_item">
+                <label>Ghi chú:</label>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium consectetur numquam ut fugit voluptatibus aspernatur vitae voluptate distinctio consequuntur quae sint atque, velit tempora repudiandae! Repudiandae cumque natus placeat!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="order_products">
+        <h3>Sản Phẩm Trong Đơn Hàng</h3>
+        <div class="table_container">
+            <table class="content_table">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product_cell">
+                            <img src="/images/product1.jpg" alt="">
+                            <span>Áo Thun Nam Trơn Cotton</span>
+                        </td>
+                        <td>250.000đ</td>
+                        <td>2</td>
+                        <td>500.000đ</td>
+                    </tr>
+                    <tr>
+                        <td class="product_cell">
+                            <img src="/images/product2.jpg" alt="">
+                            <span>Quần Jeans Xanh Đậm</span>
+                        </td>
+                        <td>450.000đ</td>
+                        <td>1</td>
+                        <td>450.000đ</td>
+                    </tr>
+                    <tr class="summary_row">
+                        <td colspan="3" class="text_right"><strong>Tổng cộng:</strong></td>
+                        <td><strong>950.000đ</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

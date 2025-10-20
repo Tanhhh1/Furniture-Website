@@ -1,0 +1,114 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/client/product.css" />
+}
+
+<section class="product_detail_container">
+    <div class="product_detail_content">
+        <div class="product_images">
+            <div class="thumbnail_container">
+                <img src="/images/product1.jpg" alt="thumb1">
+                <img src="/images/product2.jpg" alt="thumb2">
+                <img src="/images/product3.jpg" alt="thumb3">
+                <img src="/images/product4.jpg" alt="thumb4">
+            </div>
+
+            <img src="/images/product1.jpg" alt="Product Image" class="main_img" id="mainImage">
+        </div>
+        <div class="product_info">
+            <h2 class="product_name">Ghế Nordic Comfort</h2>
+            <p class="product_category">Danh mục: Nội thất</p>
+            <p class="product_price">199.00 USD</p>
+            <p class="product_description">
+                Được chế tác từ gỗ cao cấp và vải lanh mềm mại, chiếc ghế này mang đến sự sang trọng và thoải mái
+                cho mọi không gian. Thiết kế công thái học giúp hỗ trợ tư thế ngồi của bạn trong khi vẫn giữ phong
+                cách hiện đại tinh tế.
+            </p>
+
+            <div class="product_buttons">
+                <button class="btn_add"><i class='bx bx-cart'></i> Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+    <div class="product_featured">
+        <div class="product_featured_title">
+            <h2>Sản Phẩm Nổi Bật</h2>
+        </div>
+        <div class="list_product">
+            <div class="product_card">
+                <div class="product_card_content">
+                    <a href="">
+                        <img src="/images/product1.jpg" alt="craft" />
+                        <p>Ghế Bắc Âu</p>
+                    </a>
+                    <h4>$65.00</h4>
+                </div>
+                <a href="#" class="add_to_cart"><i class='bx bx-plus'></i></a>
+            </div>
+            <div class="product_card">
+                <div class="product_card_content">
+                    <a href="">
+                        <img src="/images/product1.jpg" alt="craft" />
+                        <p>Ghế Bắc Âu</p>
+                    </a>
+                    <h4>$65.00</h4>
+                </div>
+                <a href="#" class="add_to_cart"><i class='bx bx-plus'></i></a>
+            </div>
+            <div class="product_card">
+                <div class="product_card_content">
+                    <a href="">
+                        <img src="/images/product1.jpg" alt="craft" />
+                        <p>Ghế Bắc Âu</p>
+                    </a>
+                    <h4>$65.00</h4>
+                </div>
+                <a href="#" class="add_to_cart"><i class='bx bx-plus'></i></a>
+            </div>
+            <div class="product_card">
+                <div class="product_card_content">
+                    <a href="">
+                        <img src="/images/product1.jpg" alt="craft" />
+                        <p>Ghế Bắc Âu</p>
+                    </a>
+                    <h4>$65.00</h4>
+                </div>
+                <a href="#" class="add_to_cart"><i class='bx bx-plus'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="product_comment">
+        <div class="product_comment_title">
+            <h2>Đánh Giá Của Khách Hàng</h2>
+        </div>
+        <div class="comment_list">
+            <div class="comment_item">
+                <img src="/images/user.png" alt="User">
+                <div class="comment_content">
+                    <h4>John Doe</h4>
+                    <p>Rất thoải mái và thanh lịch! Rất phù hợp với phòng khách của tôi.</p>
+                    <span class="comment_date">10 tháng 10, 2025</span>
+                </div>
+            </div>
+
+            <div class="comment_item">
+                <img src="/images/user.png" alt="User">
+                <div class="comment_content">
+                    <h4>Anna Smith</h4>
+                    <p>Chất lượng tuyệt vời và giao hàng nhanh. Rất đáng tiền!</p>
+                    <span class="comment_date">12 tháng 10, 2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="comment_form">
+            <h3>Để Lại Bình Luận</h3>
+            <form action="#">
+                <textarea placeholder="Viết đánh giá của bạn..."></textarea>
+                <button type="submit">Gửi Bình Luận</button>
+            </form>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    <script src="~/js/detail.js"></script>
+}

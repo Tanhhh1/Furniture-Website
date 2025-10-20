@@ -1,0 +1,107 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/dashboard.css" />
+}
+<div class="dashboard_container">
+    <div class="dashboard_header">
+        <div>
+            <h2>Trang chủ</h2>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+    <div class="dashboard_content">
+        <div class="dashboard_top">
+            <div class="content_cards">
+                <div class="card green">
+                    <i class='bx bxs-box'></i>
+                    <div>
+                        <p>Tổng số sản phẩm</p>
+                        <h3>2390</h3>
+                    </div>
+                </div>
+                <div class="card orange">
+                    <i class='bx bxs-receipt'></i>
+                    <div>
+                        <p>Tổng số đơn hàng</p>
+                        <h3>3870</h3>
+                    </div>
+                </div>
+                <div class="card red">
+                    <i class='bx bxs-message-rounded-dots'></i>
+                    <div>
+                        <p>Tổng số đánh giá</p>
+                        <h3>970</h3>
+                    </div>
+                </div>
+                <div class="card blue">
+                    <i class='bx bxs-user'></i>
+                    <div>
+                        <p>Tổng số nhân viên</p>
+                        <h3>2770</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dashboard_bottom">
+            <div class="content_table">
+                <div class="table_header">
+                    <div class="table_title">
+                        <div></div>
+                        <h3>Yêu cầu đặt hàng gần đây</h3>
+                    </div>
+                    <div class="table_all">
+                        <a href="">Xem tất cả</a>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã đơn hàng</th>
+                            <th>Tên khách hàng</th>
+                            <th>Ngày đặt</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái</th>
+                            <th>Thanh toán</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Tuan Anh</td>
+                            <td>22-05-2025</td>
+                            <td>5.000.000đ</td>
+                            <td><span class="status completed">Hoàn tất</span></td>
+                            <td><span class="payment paid">Đã Thanh Toán</span></td>
+                            <td class="action_icons">
+                                <a href=""><i class='bx bxs-show'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Tuan Anh</td>
+                            <td>22-05-2025</td>
+                            <td>5.000.000đ</td>
+                            <td><span class="status pending">Hoàn tất</span></td>
+                            <td><span class="payment unpaid">Chưa Thanh Toán</span></td>
+                            <td class="action_icons">
+                                <a href=""><i class='bx bxs-show'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Tuan Anh</td>
+                            <td>22-05-2025</td>
+                            <td>5.000.000đ</td>
+                            <td><span class="status cancelled">Đã hủy</span></td>
+                            <td><span class="payment unpaid">Chưa Thanh Toán</span></td>
+                            <td class="action_icons">
+                                <a href=""><i class='bx bxs-show'></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

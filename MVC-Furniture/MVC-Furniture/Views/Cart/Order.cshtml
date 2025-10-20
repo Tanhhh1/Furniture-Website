@@ -1,0 +1,88 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/client/order.css" />
+}
+
+<section class="order_container">
+    <div class="order_title">
+        <h2>Đặt hàng</h2>
+        <p>Vui lòng điền thông tin nhận hàng và chọn phương thức thanh toán</p>
+    </div>
+
+    <div class="order_content">
+        <div class="shipping_info">
+            <h3>Thông tin nhận hàng</h3>
+            <form>
+                <div class="form_group">
+                    <label for="fullname">Họ và tên</label>
+                    <input type="text" id="fullname" placeholder="Nhập họ và tên" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Nhập email (tuỳ chọn)">
+                </div>
+
+                <div class="form_group">
+                    <label for="address">Địa chỉ nhận hàng</label>
+                    <input type="text" id="address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành"
+                           required>
+                </div>
+
+                <div class="form_group">
+                    <label for="note">Ghi chú</label>
+                    <textarea id="note" rows="3" placeholder="Ghi chú thêm (nếu có)"></textarea>
+                </div>
+
+                <div class="payment_methods">
+                    <h3>Phương thức thanh toán</h3>
+                    <label>
+                        <input type="radio" name="payment" value="cod" checked> Thanh toán khi nhận hàng
+                        (COD)
+                    </label><br>
+                    <label><input type="radio" name="payment" value="bank"> Chuyển khoản ngân hàng</label><br>
+                    <label><input type="radio" name="payment" value="momo"> Ví điện tử MoMo</label>
+                </div>
+
+                <button class="checkout_btn">Xác nhận đặt hàng</button>
+            </form>
+        </div>
+
+        <div class="order_summary">
+            <h3>Thông tin đơn hàng</h3>
+
+            <div class="summary_items">
+                <div class="summary_item">
+                    <img src="/images/product1.jpg" alt="Ghế gỗ sang trọng">
+                    <div class="item_info">
+                        <div>
+                            <p class="item_name">Ghế gỗ sang trọng</p>
+                            <p class="item_qty">Số lượng: 2</p>
+                        </div>
+                        <p class="item_price">120.00$</p>
+                    </div>
+                </div>
+
+                <div class="summary_item">
+                    <img src="/images/product2.jpg" alt="Bàn ăn cổ điển">
+                    <div class="item_info">
+                        <div>
+                            <p class="item_name">Bàn ăn cổ điển</p>
+                            <p class="item_qty">Số lượng: 1</p>
+                        </div>
+                        <p class="item_price">410.00$</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary_total">
+                <p>Tổng cộng</p>
+                <p>650.00$</p>
+            </div>
+        </div>
+    </div>
+</section>

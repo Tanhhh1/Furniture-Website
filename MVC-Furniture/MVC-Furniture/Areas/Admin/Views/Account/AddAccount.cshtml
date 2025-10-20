@@ -1,0 +1,63 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/form.css" />
+}
+
+<div class="form_container">
+    <div class="form_header">
+        <div>
+            <h2>Thêm nhân viên mới</h2>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+    <form action="">
+        <div class="forms_grid">
+            <div class="form_grid">
+                <div class="form_group">
+                    <label for="id">Mã nhân viên</label>
+                    <input type="text" id="id" name="id" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form_group">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
+                </div>
+            </div>
+            <div class="form_grid">
+                <div class="form_group">
+                    <label for="fullname">Họ và tên</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form_group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+            </div>
+            <div class="form_grid">
+                <div class="form_group">
+                    <label for="role">Chức vụ</label>
+                    <select id="role" name="role" required>
+                        <option value="">-- Chọn chức vụ --</option>
+                        <option value="admin">Quản trị viên</option>
+                        <option value="staff">Nhân viên</option>
+                        <option value="support">Hỗ trợ khách hàng</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form_grid">
+                <div class="form_group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                </div>
+                <div class="form_group">
+                    <label for="confirm_password">Xác nhận mật khẩu</label>
+                    <input type="password" id="confirm_password" name="confirm_password"
+                           placeholder="Nhập lại mật khẩu" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="form_actions">
+            <button type="submit" class="save_btn">Lưu</button>
+            <a href="" class="cancel">Hủy</a>
+        </div>
+    </form>
+</div>

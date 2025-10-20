@@ -1,0 +1,36 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/form.css" />
+}
+
+<div class="form_container">
+    <div class="form_header">
+        <div>
+            <h2>Sửa Thông Tin Danh Mục Sản Phẩm #112</h2>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+
+    <form action="" method="post">
+        <div class="forms_grid">
+            <div class="form_grid">
+                <div class="form_group">
+                    <label for="category_id">Mã danh mục</label>
+                    <input type="text" id="category_id" name="category_id" placeholder="Nhập mã danh mục">
+                </div>
+                <div class="form_group">
+                    <label for="category_name">Tên danh mục</label>
+                    <input type="text" id="category_name" name="category_name" placeholder="Nhập tên danh mục">
+                </div>
+            </div>
+            <div class="form_group">
+                <label for="description">Mô tả</label>
+                <textarea id="description" name="description" placeholder="Nhập mô tả danh mục" rows="4"
+                          required></textarea>
+            </div>
+        </div>
+        <div class="form_actions">
+            <button type="submit" class="save_btn">Lưu</button>
+            <a href="" class="cancel">Hủy</a>
+        </div>
+    </form>
+</div>

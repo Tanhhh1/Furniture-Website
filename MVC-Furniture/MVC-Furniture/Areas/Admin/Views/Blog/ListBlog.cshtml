@@ -1,0 +1,72 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/list.css" />
+}
+
+<div class="list_container">
+    <div class="list_header">
+        <div>
+            <h2>Quản Lý Bài Viết</h2>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+
+    <div class="list_content">
+        <div class="table_actions">
+            <div class="search_box">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Tìm kiếm bài viết...">
+            </div>
+            <a class="add" href="">Thêm Bài Viết</a>
+        </div>
+
+        <div class="table_wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tiêu đề</th>
+                        <th>Người đăng</th>
+                        <th>Mô tả ngắn</th>
+                        <th>Ngày đăng</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Thiết kế nội thất phòng khách hiện đại</td>
+                        <td>Nguyễn Minh</td>
+                        <td>Những gợi ý tối ưu không gian phòng khách hiện đại...</td>
+                        <td>10-05-2025</td>
+                        <td class="action_icons">
+                            <a href=""><i class='bx bx-edit'></i></a>
+                            <a href=""><i class='bx bxs-trash'></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>10 xu hướng thiết kế nội thất 2025</td>
+                        <td>Trần Hương</td>
+                        <td>Cùng khám phá các xu hướng nổi bật giúp không gian sống...</td>
+                        <td>02-04-2025</td>
+                        <td class="action_icons">
+                            <a href=""><i class='bx bx-edit'></i></a>
+                            <a href=""><i class='bx bxs-trash'></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ý tưởng decor phòng ngủ nhỏ</td>
+                        <td>Phạm Lan</td>
+                        <td>Phòng ngủ nhỏ vẫn có thể trở nên ấm áp và tiện nghi...</td>
+                        <td>14-03-2025</td>
+                        <td class="action_icons">
+                            <a href=""><i class='bx bx-edit'></i></a>
+                            <a href=""><i class='bx bxs-trash'></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/list.css" />
+}
+
+<div class="list_container">
+    <div class="list_header">
+        <div>
+            <h2>Quản Lý Danh Mục Sản Phẩm</h2>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+
+    <div class="list_content">
+        <div class="table_actions">
+            <div class="search_box">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Tìm kiếm danh mục...">
+            </div>
+            <a class="add" href=""><i class='bx bx-plus'></i> Thêm Danh Mục</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã danh mục</th>
+                    <th>Tên danh mục</th>
+                    <th>Mô tả</th>
+                    <th>Ngày tạo</th>
+                    <th>Ngày cập nhật</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CAT001</td>
+                    <td>Bàn Ghế</td>
+                    <td>Các loại bàn ghế phòng khách hiện đại</td>
+                    <td>12-02-2025</td>
+                    <td>28-03-2025</td>
+                    <td class="action_icons">
+                        <a href="#"><i class='bx bx-edit'></i></a>
+                        <a href="#"><i class='bx bxs-trash'></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CAT002</td>
+                    <td>Đèn Trang Trí</td>
+                    <td>Đèn trần, đèn bàn và các loại đèn trang trí nội thất</td>
+                    <td>14-02-2025</td>
+                    <td>28-03-2025</td>
+                    <td class="action_icons">
+                        <a href="#"><i class='bx bx-edit'></i></a>
+                        <a href="#"><i class='bx bxs-trash'></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CAT003</td>
+                    <td>Giường Ngủ</td>
+                    <td>Giường ngủ gỗ, giường đôi, giường tầng cho trẻ em</td>
+                    <td>18-03-2025</td>
+                    <td>30-03-2025</td>
+                    <td class="action_icons">
+                        <a href="#"><i class='bx bx-edit'></i></a>
+                        <a href="#"><i class='bx bxs-trash'></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

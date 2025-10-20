@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/admin/sidebar.css" asp-append-version="true" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    @RenderSection("Styles", required: false)
+</head>
+
+<body>
+    <div class="sidebar active">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bxs-store'></i>
+                <div class="logo_name">NovusHaus</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+
+        <ul class="nav_list">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user-account'></i>
+                    <span class="links_name">Account</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-category'></i>
+                    <span class="links_name">Category</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-box'></i>
+                    <span class="links_name">Product</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cart'></i>
+                    <span class="links_name">Order</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-news'></i>
+                    <span class="links_name">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-message-dots'></i>
+                    <span class="links_name">Feedback</span>
+                </a>
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <a href="">
+                        <img src="/images/user.png" alt="">
+                        <div class="name_job">
+                            <div class="name">Tuan Anh</div>
+                            <div class="job">Admin</div>
+                        </div>
+                    </a>
+                </div>
+                <i class="bx bx-log-out" id="log_out"></i>
+            </div>
+        </div>
+    </div>
+
+    <section class="section_container">
+        @RenderBody()
+    </section>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/sidebar.js"></script>
+</body>
+</html>

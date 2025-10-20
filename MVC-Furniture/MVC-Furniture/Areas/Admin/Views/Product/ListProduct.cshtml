@@ -1,0 +1,104 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/admin/list.css" />
+}
+
+<div class="list_container">
+    <div class="list_header">
+        <div>
+            <h2>Quản Lý Sản Phẩm</h2>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+
+    <div class="list_content">
+        <div class="table_actions">
+            <div class="search_box">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+            </div>
+            <div class="filter_box">
+                <select>
+                    <option value="">Tất cả danh mục</option>
+                    <option value="ban-ghe">Bàn Ghế</option>
+                    <option value="den-trang-tri">Đèn Trang Trí</option>
+                    <option value="giuong-ngu">Giường Ngủ</option>
+                    <option value="tu-ke">Tủ - Kệ</option>
+                </select>
+                <a class="add" href="#"><i class='bx bx-plus'></i> Thêm Sản Phẩm</a>
+            </div>
+        </div>
+
+        <div class="table_wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Sản phẩm</th>
+                        <th>Danh mục</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Ngày tạo</th>
+                        <th>Ngày cập nhật</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PROD001</td>
+                        <td>
+                            <div class="product_info">
+                                <img src="/images/product1.jpg" alt="product">
+                                <span>Bàn Gỗ Sồi Tự Nhiên</span>
+                            </div>
+                        </td>
+                        <td>Bàn Ghế</td>
+                        <td>3,200,000đ</td>
+                        <td>15</td>
+                        <td>10-02-2025</td>
+                        <td>28-03-2025</td>
+                        <td class="action_icons">
+                            <a href="#"><i class='bx bx-edit'></i></a>
+                            <a href="#"><i class='bx bxs-trash'></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PROD002</td>
+                        <td>
+                            <div class="product_info">
+                                <img src="/images/product2.jpg" alt="product">
+                                <span>Đèn Bàn Trang Trí</span>
+                            </div>
+                        </td>
+                        <td>Đèn Trang Trí</td>
+                        <td>950,000đ</td>
+                        <td>40</td>
+                        <td>12-03-2025</td>
+                        <td>30-03-2025</td>
+                        <td class="action_icons">
+                            <a href="#"><i class='bx bx-edit'></i></a>
+                            <a href="#"><i class='bx bxs-trash'></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PROD003</td>
+                        <td>
+                            <div class="product_info">
+                                <img src="/images/product3.jpg" alt="product">
+                                <span>Giường Ngủ Hiện Đại</span>
+                            </div>
+                        </td>
+                        <td>Giường Ngủ</td>
+                        <td>5,600,000đ</td>
+                        <td>10</td>
+                        <td>15-03-2025</td>
+                        <td>02-04-2025</td>
+                        <td class="action_icons">
+                            <a href="#"><i class='bx bx-edit'></i></a>
+                            <a href="#"><i class='bx bxs-trash'></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

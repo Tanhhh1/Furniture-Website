@@ -7,4 +7,12 @@
     <RootNamespace>MVC_Furniture</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
 </Project>

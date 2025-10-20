@@ -1,0 +1,144 @@
+﻿.blog_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.blog_card {
+    display: flex;
+    align-items: stretch;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.blog_header {
+    text-align: center;
+}
+
+.blog_image {
+    flex: 1;
+    max-width: 45%;
+}
+
+    .blog_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.blog_content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog_date {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog_title {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.blog_desc {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.read_more {
+    color: #0066cc;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .read_more:hover {
+        color: #003d80;
+    }
+
+.blog_detail_container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 100px auto;
+}
+
+.blog_banner img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.blog_detail_content {
+    margin-top: 2.5rem;
+}
+
+.blog_date {
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+    .blog_date .author {
+        font-weight: 600;
+        color: #333;
+    }
+
+.blog_title {
+    font-size: 1.5rem;
+    color: #111;
+    margin-bottom: 1.5rem;
+}
+
+.blog_text {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.back_btn:hover {
+    background-color: #0066cc;
+    color: #fff;
+    transform: translateX(-3px);
+}
+
+
+@media (max-width: 768px) {
+    .blog_card {
+        flex-direction: column;
+    }
+
+    .blog_image {
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .blog_content {
+        padding: 1.5rem;
+    }
+
+    .blog_banner img {
+        height: 300px;
+    }
+
+    .related_container {
+        flex-direction: column;
+    }
+
+    .related_card {
+        flex: 1 1 100%;
+    }
+}

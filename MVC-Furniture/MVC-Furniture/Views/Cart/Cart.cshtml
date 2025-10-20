@@ -1,0 +1,58 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/client/cart.css" />
+}
+
+<section class="cart_container">
+    <div class="cart_title">
+        <h2>Giỏ hàng của bạn</h2>
+        <p>Kiểm tra lại các sản phẩm đã chọn trước khi tiến hành thanh toán</p>
+    </div>
+
+    <div class="cart_content">
+        <div class="cart_items">
+            <div class="cart_item">
+                <img src="/images/product1.jpg" alt="Hình sản phẩm">
+                <div class="cart_item_details">
+                    <div class="cart_item_top">
+                        <h3>Ghế gỗ sang trọng</h3>
+                        <span class="cart_item_remove"><i class="bx bx-x"></i></span>
+                    </div>
+                    <div class="cart_item_bot">
+                        <div class="quantity_box">
+                            <button class="qty_btn">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="qty_btn">+</button>
+                        </div>
+                        <p>120.00$</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_item">
+                <img src="/images/product1.jpg" alt="Hình sản phẩm">
+                <div class="cart_item_details">
+                    <div class="cart_item_top">
+                        <h3>Ghế gỗ sang trọng</h3>
+                        <span class="cart_item_remove"><i class="bx bx-x"></i></span>
+                    </div>
+                    <div class="cart_item_bot">
+                        <div class="quantity_box">
+                            <button class="qty_btn">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="qty_btn">+</button>
+                        </div>
+                        <p>120.00$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart_summary">
+            <h2>Thông tin đơn hàng</h2>
+            <div class="summary_total">
+                <p>Tổng cộng</p>
+                <p>530.00$</p>
+            </div>
+            <button class="checkout_btn">Tiến hành thanh toán</button>
+        </div>
+    </div>
+</section>

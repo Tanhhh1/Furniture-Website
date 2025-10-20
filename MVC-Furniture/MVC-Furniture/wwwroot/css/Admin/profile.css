@@ -1,0 +1,138 @@
+﻿.profile_container {
+    width: 100%;
+    border-radius: 12px;
+    padding: 30px;
+    background: #fff;
+}
+
+.profile_header h2 {
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.profile_header span {
+    font-size: 16px;
+    color: #666;
+}
+
+.profile_card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 25px 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile_info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+    .profile_info img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ccc;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .profile_info img:hover {
+            transform: scale(1.05);
+        }
+
+    .profile_info h3 {
+        font-size: 1.2rem;
+        color: #111;
+    }
+
+    .profile_info p {
+        color: #555;
+        font-size: 0.9rem;
+    }
+
+.save_btn {
+    border: none;
+    background-color: #111;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
+}
+
+    .save_btn:hover {
+        background-color: #eab308;
+        color: #111;
+    }
+
+.info_card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .card_header h3 {
+        font-size: 1.2rem;
+        color: #222;
+    }
+
+.info_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.info_item {
+    display: flex;
+    flex-direction: column;
+}
+
+    .info_item label {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 6px;
+    }
+
+    .info_item input {
+        padding: 10px;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        color: #222;
+        transition: 0.3s;
+    }
+
+@media (max-width: 768px) {
+    .profile_card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .info_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
